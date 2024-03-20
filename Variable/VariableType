@@ -1,0 +1,98 @@
+package class01;
+
+public class VariableType {
+
+	public static void main(String[] args) {
+		
+		// byte 타입 범위
+		byte var1 = -128;
+		byte var2 = -30;
+		byte var3 = 0;
+		byte var4 = 30;
+		byte var5 = 127;
+		// byte var6 = 128;	// byte 허용 범위를 초과한 값, 컴파일 에러
+
+		System.out.println(var1);
+		System.out.println(var2);
+		System.out.println(var3);
+		System.out.println(var4);
+		System.out.println(var5);
+		
+		
+		// Long 타입 범위
+		long var11 = 10;
+		long var12 = 20L;
+		// long var13 = 10000000000;  // int 범위를 넘어가서 컴파일 에러
+		long var14 = 10000000000L; // int 범위를 넘어가면 뒤에 L을 붙여야 에러가 안남
+		
+		System.out.println(var11);
+		System.out.println(var12);
+		System.out.println(var14);
+		
+		// char 타입 - ''(작은 따옴표)로 감싼 것 - 유니코드로 변환되어 저장
+		// 2byte 크기
+		char var21 = 'A'; // 유니코드 : 65
+		char var22 = 'B'; // 유니코드 : 65
+		char var23 = '가'; // 유니코드 : 44032
+		char var24 = '각'; // 유니코드 : 44033
+		
+		// 문자 리터럴은 유니코드로 변환되기 때문에 int 타입 변수에 저장 가능
+		char var21_c = 'A';
+		int var21_int = 'A';
+		
+		// 10진수, 16진수 형태로 유니코드 저장 가능
+		char c = 65;	 // 10진수
+		char d = 0x0041; // 16진수
+		
+		
+		System.out.println(var21);
+		System.out.println(var22);
+		System.out.println(var23);
+		System.out.println(var24);
+		System.out.println(var21_c);
+		System.out.println("A를 int로 저장" + var21_int);
+		System.out.println("10진수 유티코드 65 : " +c);
+		System.out.println("16진수 유니코드 0x0041 : " + d);
+		
+		// String 타입 - ""(큰따옴표)로 감싼 문자들(문자열)
+		String name = "홍길동";
+		String job = "프로그래머";
+		System.out.println("이름 : " + name + "\n직업 : " + job );
+		
+		
+		// 실수 타입 - floar, double
+		// 기본 적으로 double로 해석
+		// float는 뒤에 f나 F를 붙여야 컴파일 에러가 안남
+		
+		// 실수 값 저장
+		// float var30 = 3.14; // 컴파일 에러
+		float var31 = 3.14f;
+		double var32 = 3.14;
+		
+		// 정밀도 테스트
+		float var33 = 0.1234567890123456789f;
+		double var34 = 0.1234567890123456789;
+		
+		System.out.println("float var31 : " + var31);
+		System.out.println("double var32 : " + var32);
+		System.out.println("var33 : " + var33 +" - float값으로 표현");
+		System.out.println("var34 : " + var34 + " - double값으로 표현 "); // double타입이 float타입보다 2배이상 정밀한 값 출력
+		
+		//e(지수와 가수로 표현된 소수점이 있는 10진수 실수) 사용하기
+		double var36 = 3e6;
+		float var37 = 3e6f;
+		double var38 = 2e-3;
+		System.out.println("var36 : " + var36);
+		System.out.println("var37 : " + var37);
+		System.out.println("var38 : " + var38);
+		
+		// 논리 타입 true, false
+		boolean stop = true;
+		if(stop) {
+			System.out.println("중지합니다.");
+		}else {
+			System.out.println("시작합니다.");
+		}
+	}
+
+}
