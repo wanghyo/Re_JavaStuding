@@ -1,0 +1,14 @@
+public class VariableScope {
+  // 변수 사용 범위 알기 - 변수는 자신이 속한 블록 내부에서만 사용할 수 있음
+	public static void main(String[] args) {
+		int v1 = 15;
+		if(v1>10) {
+			int v2;  // if 불록 안에서만 사용가능
+			v2 = v1 - 10;
+		}
+		
+		int v3 = v1 + v2;  // v2 변수를 사용할 수 없어 컴파일 에러 발생
+
+	}
+
+}
