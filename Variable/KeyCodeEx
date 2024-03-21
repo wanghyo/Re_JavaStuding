@@ -1,0 +1,62 @@
+import java.util.Scanner;
+
+public class KeyCodeEx {
+
+	public static void main(String[] args) throws Exception {
+		// main에 System.in.read()에 대한 예외처리 코드 추가
+		
+		
+		int keyCode;  // a입력
+		
+		// System.in.read(); // 입력된 키코드를 읽음
+		
+		keyCode = System.in.read(); // a를 읽음
+		System.out.println("keyCode: " + keyCode);  // 97 - a 값
+		 
+		keyCode = System.in.read(); // enter의 2개 값중 하나를 읽음
+		System.out.println("keyCode: " + keyCode);  // 13  - enter1 값 
+		
+		keyCode = System.in.read(); // 나머지 enter 값을 읽을
+		System.out.println("keyCode: " + keyCode );  // 10 - enter2 값
+		
+		
+		// 입력된 키의 개수와 상관없이 키코드 읽기 
+		// 무한 반복에 빠져서 강제 중지 해줘야 하는 방법
+//		while(true) {
+//			keyCode = System.in.read();
+//			System.out.println("keyCode: " + keyCode);
+//		}
+		
+		// 특정 숫자를 입력하면 반복을 종료하는 방법
+		while(true) {
+			keyCode = System.in.read();
+			System.out.println("keyCode: " + keyCode);
+			if(keyCode == 112) {  // p를 입력하면 반복 종료
+				break;
+			}
+		}
+		System.out.println("종료");
+		
+		
+		
+		// System.in.read()는 키코드 하나씩 읽어 한글은 읽을 수 없음
+		// 단점 보완으로 Scanner 클래스 사용
+		Scanner scanner = new Scanner(System.in);
+		String inputData;
+		
+		while(true) {
+			inputData = scanner.nextLine();  //nextLine은 enter키가 입력되기 전까지 대기상태, 문자열로 읽음
+			System.out.println("입력된 문자열: \"" + inputData + "\"");
+			if(inputData.equals("q")) {  // equals() : 문자열(String)이 동일한지 비교,  기본타입은 ==으로 비교
+				break;
+				
+				// boolean result = inputData.equals("비교문자열") : 같으면 true, 다르면 false
+			}
+			
+		}
+		System.out.println("종료");
+		
+
+	}
+
+}
