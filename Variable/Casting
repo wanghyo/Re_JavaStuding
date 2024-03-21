@@ -1,0 +1,21 @@
+public class Casting {
+
+	public static void main(String[] args) {
+		// 강제 타입 변환 : 큰 허용 범위 타입을 작은 허용 범위 타입으로 강제로 저장하는 것
+		// 작은 허용 범위 타입 = (작은 허용 범위 타입)큰 허용 범위 타입
+		
+		int intValue = 44032;
+		char charValue = (char) intValue;  
+		System.out.println("유니코드 44032 :" + charValue);  // 가
+		
+		long longValue = 500;
+		intValue = (int)longValue;
+		System.out.println("(int)longValue : " + intValue); // 500
+		
+		double doubleValue = 3.14;
+		intValue = (int)doubleValue; // 실수 타입을 정수 타입으로 캐스팅 할 경우 소수점 이하는 버려짐
+		System.out.println("(int)doubleValue : " + intValue);  // 3
+		
+	}
+
+}
