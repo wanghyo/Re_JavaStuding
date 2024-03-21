@@ -1,0 +1,30 @@
+public class Promotion {
+
+	public static void main(String[] args) {
+		// 자동 타입 변환 : 값의 허용 범위가 작은 타입이 큰 타입으로 저장될 때 발생 
+		// byte < short < int < long < float < double
+		
+		byte byteValue = 10;
+		int intValue = byteValue; // byte < int : 자동 타입 변환
+		System.out.println("byteValue : " + byteValue);  // 값 10
+		System.out.println("intValue : "+ intValue); 	 // 값 10
+
+		
+		// 정수 타입이 실수 타입으로 저장될 경우에는 무조건 자동 타입 변환이 일어남
+		// 정수 타입 < 실수 타입
+		long longValue = 5000000000L;   // long(정수 타입)
+		float floatValue = longValue; //5.0E9f로 저장됨
+		double doubleValue = longValue; //5.0E9로 저장됨
+		System.out.println("longValue : " + longValue);
+		System.out.println("floatValue : "+ floatValue);
+		System.out.println("doubleValue : " + doubleValue);
+		
+		
+		// char타입이 int 타입으로 자동 타입 변환되면 유티코드 값이 int 타입에 저장
+    // char타입은 음수를 허용하지 않기 때문에 음수를 허용하는 byte 타입으로 변환 불가능
+		char charValue ='A';
+		int intValue1 = charValue;
+		System.out.println("charValue : "+charValue);
+		System.out.println("intValue1 : " + intValue1); //유니코드 65로 저장
+	}
+}
