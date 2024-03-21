@@ -1,0 +1,53 @@
+public class LongOperation {
+
+	public static void main(String[] args) {
+		// 정수 연산에서 자동변환
+		// 여러 피연산자 중 허용 범위가 큰 타입으로 변환되어 연산 수행
+		byte value1 = 10;
+		int value2 = 100;
+		long value3 = 1000L;
+		
+		long result = value1 + value2 + value3;  // byte < int < long이기 때문에 long타입으로 해야 오류가 안남
+		System.out.println(result);
+
+		
+		
+		// 실수를 포함한 연산에서 자동 변환
+		byte byteValue1 = 10;
+		byte byteValue2 = 20;
+		// byte byteValue3 = byteValue1 + byteValue2 // int로 계산되어 컴파일 에러
+		int intValue1 = byteValue1 + byteValue2;
+		System.out.println(intValue1);
+		
+		char charValue1 = 'A';
+		char charValue2 = 1;
+		// char charValue3 = charValue1 + charValue2; // 컴파일 에러
+		int intValue2 = charValue1 + charValue2;
+		System.out.println("유니코드=" + intValue2);
+		System.out.println("출력문자=" + (char)intValue2);
+		
+		int intValue3 = 10;
+		int intValue4 = intValue3/4;  // 결과 2 ; 0.5가 없어짐
+		System.out.println(intValue4);
+		
+		int intValue5 = 10;
+		// int intValue6 = 10 / 4.0 // double로 나와서 컴파일 에러
+		double doubleValue = intValue5 / 4.0;
+		System.out.println(doubleValue);
+		
+		int x = 1;
+		int y = 2;
+		System.out.println("int로 연산 할 경우 : " + x/y);
+		// 정수 연산이 아닌 실수 연산으로 변경해야 결과 값이 0.5로 출력
+	
+		double result1 = (double) x / y;
+		double result2 = x /(double) y;
+		double result3 = (double) x / (double) y;
+		
+		System.out.println(result1);
+		System.out.println(result2);
+		System.out.println(result3);
+		
+	}
+
+}
