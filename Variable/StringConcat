@@ -1,0 +1,55 @@
+public class StringConcat {
+
+	public static void main(String[] args) {
+		// 숫자 연산
+		int value = 10 + 2 + 8; // 과정 : 12 + 8 = 20 
+		System.out.println("value: " + value);
+		
+		// 문자열 결합 연산
+		String str1 = 10 + 2 + "8"; // 과정 : 12 + "8" = "128"
+		System.out.println("str1 : " + str1 );
+		
+		String str2 = 10 + "2" + 8; // 과정 : "102" + 8 = "1028" 
+		System.out.println("str2 : " + str2);
+		
+		String str3 = "10" + 2 + 8;  // 과정 : "102" + 8 = "1028"
+		System.out.println("str3 : " + str3);
+		
+		String str4 = "10" + (2 + 8);  // 과정 : "10" + 10 = "1010"
+		System.out.println("str4 : " + str4);
+		
+	
+		// 문자열을 기본 타입으로 강제 타입 변환
+		// String -> byte
+		String str5 = "10";
+		byte byteValue = Byte.parseByte(str5);
+		short shortValue = Short.parseShort(str5);
+		int intValue = Integer.parseInt(str5);
+		long longValue = Long.parseLong(str5);
+		System.out.println(byteValue);
+		System.out.println(shortValue);
+		System.out.println(intValue);
+		System.out.println(longValue);
+		
+		String str6 = "12.345";
+		float floatValue = Float.parseFloat(str6);
+		double doubleValue = Double.parseDouble(str6);
+		System.out.println(floatValue);
+		System.out.println(doubleValue);
+		
+		String str7 = "true";
+		boolean booleanValue = Boolean.parseBoolean(str7);
+		System.out.println(booleanValue);
+		
+		// 기본 타입을 문자열로 변경하는 경우
+		String str8 = String.valueOf(10);
+		String str9 = String.valueOf(3.14);
+		String str10 = String.valueOf(true);
+		System.out.println(str8);
+		System.out.println(str9);
+		System.out.println(str10);
+		
+		
+	}
+
+}
