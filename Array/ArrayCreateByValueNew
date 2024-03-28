@@ -1,0 +1,59 @@
+
+public class ArrayCreateByValueNew {
+
+	public static void main(String[] args) {
+		// 값 목록은 가지고 있지 않지만, 값들을 저장할 배열을 미리 만들고 싶을 때 :타입[] 변수 = new 타입[길이];
+		// 타입[] 변수 = null;
+		// 변수 = new 타입[길이];
+		// new 연산자로 배열을 처음 생성할 때 기본값으로 자동 초기화
+		// byte[]   초기화 값 0
+		// char[]   초기화 값 '\u0000'
+		// short[]  초기화 값 0
+		// int[]    초기화 값 0
+		// long[]   초기화 값 0
+		// float[]  초기화 값 0.0F
+		// double[] 초기화 값 0.0
+		// boolean[]초기화 값 false
+		// 클래스[]   초기화 값 null
+		// 인터페이스[]초기화 값 null
+		
+		
+		int[] arr1 = new int[3]; // 초기화 값 0
+		for(int i=0; i<3 ; i++) {
+			System.out.println("arr1[" + i + "] : " + arr1[i]);
+		}
+		
+		arr1[0] = 10;
+		arr1[1] = 20;
+		arr1[2] = 30;
+		for(int i = 0; i<3; i++) {
+			System.out.println("arr1[" + i +"] : " + arr1[i]);
+		}
+		
+		
+		double[] arr2 = new double[3];  // 초기화 값 0.0
+		for(int i=0; i<3; i++) {
+			System.out.println("arr2[" + i + "] : " + arr2[i]);
+		}
+		
+		arr2[0] = 0.1;
+		arr2[1] = 0.2;
+		arr2[2] = 0.3;
+		for(int i = 0; i<3; i++) {
+			System.out.println("arr2[" + i + "] : " + arr2[i]);
+		}
+		
+		String[] arr3 = new String[3]; //초기화 값 null
+		for(int i = 0; i <3 ; i++) {
+			System.out.println("arr3[" + i +"] : " + arr3[i]);
+		}
+		
+		arr3[0] = "1월";
+		arr3[1] = "2월";
+		arr3[2] = "3월";
+		for(int i = 0; i<3 ; i++) {
+			System.out.println("arr3[" + i + "] : " + arr3[i]);
+		}
+
+	}
+}
