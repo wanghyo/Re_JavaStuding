@@ -1,0 +1,17 @@
+public class Korean {
+	// 필드
+	String nation = "대한민국";
+	String name;
+	String ssn;
+	
+	// 생성자 - 객체 생성 시점에 외부에서 제공되는 다양한 값들로 초기화되어야 할 때 
+	public Korean(String name, String ssn) {
+		// 매개 변수 이름이 다른면 가독성이 좋지 않아 필드와 같은 이름 사용
+		// 동일 이름의 매개변수가 사용 우선순위가 높기 때문에 해당 필드에 접근은 "this"를 사용
+		// this는 객체 자신의 참조!
+		this.name = name;
+		this.ssn = ssn;
+		
+	}
+	
+}
