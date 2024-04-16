@@ -1,0 +1,31 @@
+public class DmbCellPhone extends CellPhone {
+	//  상속 - 이미 잘 개발된 클래스를 재사용하는 방법
+	//  유지 보수 시간을 최소화 할 수 있음
+	//  extends + 부모 클래스
+	//  여러 개의 부모 클래스르 상속할 수 없음
+	//  private 접근 제한을 갖는 필드와 메서드는 상속 대상에서 제외
+	//  부모와 자식이 다른 패키지에 존재한다면 default 접근 제한을 갖는 필드와 메소드도 상속 제상에서 제외
+
+	int channel;
+	
+	DmbCellPhone(String model, String color, int channel){
+		this.model = model;		// CellPhone 클래스로부터 상속받은 필드
+		this.color = color;		// CellPhone 클래스로부터 상속받은 필드
+		this.channel = channel;
+	}
+	
+	
+	void turnOnDmb() {
+		System.out.println("채널 " + channel + "번 DMB 방송 수신을 시작합니다.");
+	}
+	
+	void changeChannelDmb(int channel) {
+		this.channel = channel;
+		System.out.println("채널 " + channel +"번으로 바꿉니다.");
+	}
+	
+	void turnOffDmb() {
+		System.out.println("DMB 방송 수신을 멈춥니다.");
+	}
+	
+}
